@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Mahiblog.apps.MahiblogConfig',
-    'Mahimail',
+    'Mahimail.apps.MahimailConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

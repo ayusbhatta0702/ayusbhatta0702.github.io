@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Checking again</h1>
-</body>
-</html>
+{% extends 'Mahimail/layout.html' %}
+
+    {% block content%}
+
+        <h1>See the blogs</h1>
+
+        <main role="main" class="container">
+            <ul class="list-unstyled">
+                {% for post in posts %}
+                    <li class="media">
+                    <img class="mr-3" src = "C:\Users\Ayus\ayusbhatta0702.github.io\Django\Mahimail\templates\Mahimail\My_potrait.jpg" alt="Cute photo of author">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">{{post.Title}}</h5>
+                        <p>By {{post.Name}} on {{post.Date}}</p>
+                        {{post.Content}}
+                    </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </main>
+    {% endblock content %}
